@@ -1,7 +1,7 @@
 {
-  "name": "testcafe-reporter-influxdb",
-  "version": "1.5.0",
-  "description": "TestCafe reporter plugin for Influxdb",
+  "name": "testcafe-reporter-influxdb-diauxclient",
+  "version": "1.6.0",
+  "description": "TestCafe reporter plugin for Influxdb with extended feature meta datas",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "files": [
@@ -21,7 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vanbadasselt/testcafe-reporter-influxdb.git"
+    "url": "git+https://github.com/AKBana42/testcafe-reporter-influxdb-diauxclient.git"
   },
   "keywords": [
     "testcafe",
@@ -30,15 +30,14 @@
     "plugin"
   ],
   "author": {
-    "name": "anaisvanasselt",
-    "email": "anais@detesters.nl",
-    "url": "https://linkedin.com/in/anais-van-asselt"
+    "name": "akbana42",
+    "email": "akbana42@googlemail.com"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/vanbadasselt/testcafe-reporter-influxdb/issues"
+    "url": "https://github.com/AKBana42/testcafe-reporter-influxdb-diauxclient/issues"
   },
-  "homepage": "https://github.com/vanBadAsselt/testcafe-reporter-influxdb/blob/main/README.md",
+  "homepage": "https://github.com/AKBana42/testcafe-reporter-influxdb-diauxclient/blob/main/README.md",
   "devDependencies": {
     "@babel/core": "^7.3.4",
     "@babel/plugin-transform-runtime": "^7.3.4",

@@ -3,13 +3,13 @@
     "baseUrl": ".",
     "declaration": true,
     "esModuleInterop": true,
-    "lib": ["es6", "dom"],
+    "lib": ["ES2020", "dom"],
     "module": "commonjs",
     "noImplicitAny": true,
     "outDir": "lib",
     "resolveJsonModule": true,
     "rootDir": "./src",
-    "target": "es6"
+    "target": "ES2020"
   },
   "exclude": ["lib", "node_modules"]
 }

@@ -8,10 +8,12 @@ export const UNKNOWN = 'UNK';
 export class TestDataProcessor {
   private _application: string = UNKNOWN;
   private _durationTestRunMs: number = 0;
-  private _feature: string = UNKNOWN;
+  private _feature: string = UNKNOWN;  
   private _fixtureName: string = UNKNOWN;
   private _releaseVersion: string = UNKNOWN;
+  private _category: string = UNKNOWN;
   private _risk: string = UNKNOWN;
+  private _tfs: string = UNKNOWN;
   private _startTimeTest: number = 0;
   private _startHrTimeTest: bigint = BigInt(0);
   private _startTimeTestRun: number = 0;
@@ -41,7 +43,9 @@ export class TestDataProcessor {
     this._testCafeTestPoint.tags.application = this._application;
     this._testCafeTestPoint.tags.feature = this._feature;
     this._testCafeTestPoint.tags.releaseVersion = this._releaseVersion;
+    this._testCafeTestPoint.tags.category = this._category;    
     this._testCafeTestPoint.tags.risk = this._risk;
+    this._testCafeTestPoint.tags.tfs = this._tfs;
     this._testCafeTestPoint.tags.testType = this._testType;
   }
 
@@ -100,6 +104,7 @@ export class TestDataProcessor {
    * @param metadata on fixture level
    */
   set fixtureMetaData(metadata: TestMetadata) {
+    
     if (metadata.risk) {
       this._testCafeTestPoint.tags.risk = metadata.risk;
       this._risk = metadata.risk;
@@ -112,6 +117,21 @@ export class TestDataProcessor {
     } else if (!metadata.feature) {
       this._feature = UNKNOWN;
     }
+
+    if (metadata.category) {
+      this._testCafeTestPoint.tags.categories = metadata.category;
+      this._category = metadata.category;
+    } else if (!metadata.category) {
+      this._category = UNKNOWN;
+    }
+
+    if (metadata.tfs) {
+      this._testCafeTestPoint.tags.tfs = metadata.tfs;
+      this._tfs = metadata.tfs;
+    } else if (!metadata.tfs) {
+      this._tfs = UNKNOWN;
+    }
+
   }
 
   /**
@@ -123,6 +143,10 @@ export class TestDataProcessor {
     if (metadata.risk) this._testCafeTestPoint.tags.risk = metadata.risk;
 
     if (metadata.feature) this._testCafeTestPoint.tags.feature = metadata.feature;
+
+    if (metadata.category) this._testCafeTestPoint.tags.category = metadata.category;
+
+    if (metadata.tfs) this._testCafeTestPoint.tags.tfs = metadata.tfs;    
   }
 
   set releaseVersion(releaseVersion: string) {

@@ -5,6 +5,8 @@
 export interface TestMetadata {
   risk?: Risk;
   feature?: Feature;
+  category?: Category;
+  tfs?: TFS;
 }
 
 export enum Risk {
@@ -16,5 +18,23 @@ export enum Risk {
 
 export enum Feature {
   LOGIN = 'LOGIN',
+  MOBILE = 'MOBILE',
   USABILITY = 'USABILITY',
+  THEME = 'THEME',
+  DARKMODE = 'DARKMODE'
+}
+
+export enum TFS {
+  EPIC = 'EPIC',
+  PBI = 'PBI',
+  TASK = 'TASK',
+  BUG = "BUG"
+}
+
+export enum Category {
+  FOCUS = 'FOCUS',
+  HISTORY  = 'HISTORY',
+  NAVIGATION = 'NAVIGATION',
+  PERSISTANCE  = 'PERSISTANCE',
+  SYNCHRONIZATION  = 'SYNCHRONIZATION'
 }

@@ -1,8 +1,8 @@
 {
   "generator-testcafe-reporter": {
     "promptValues": {
-      "githubUsername": "vanBadAsselt",
-      "website": "https://linkedin.com/in/anais-van-asselt"
+      "githubUsername": "AKBana42",
+      "website": "https://github.com/AKBana42/testcafe-reporter-influxdb-diauxclient"
     }
   }
 }
