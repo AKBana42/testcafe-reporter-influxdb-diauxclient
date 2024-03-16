@@ -1,11 +1,22 @@
-# testcafe-reporter-influxdb
-[![Build Status](https://travis-ci.org/vanBadAsselt/testcafe-reporter-influxdb.svg)](https://travis-ci.org/vanBadAsselt/testcafe-reporter-influxdb)
+# testcafe-reporter-influxdb-diauxclient
+[![Build Status](not available)
 
 This is the **influxdb** reporter plugin for [TestCafe](http://devexpress.github.io/testcafe).
 Generated this project using the [generator-testcafe-reporter](https://devexpress.github.io/testcafe/documentation/guides/extend-testcafe/reporter-plugin.html)
 
+This project is forked from (https://github.com/vanBadAsselt/testcafe-reporter-influxdb) V1.6.0
+
+In this fork, further features such as:
+* FrontendVersion
+* BackendVersion
+* Category
+* Product
+* PBI
+* Task
+* BUG
+
 <p align="center">
-    <img src="https://raw.github.com/vanBadAsselt/testcafe-reporter-influxdb/master/media/preview.png" alt="preview" />
+    <img src="https://raw.github.com/AKBana42/testcafe-reporter-influxdb-diauxclient/master/media/preview.png" alt="preview" />
 </p>
 
 ## Requirements
@@ -17,7 +28,7 @@ In the project where you use the reporter:
 ## Install
 
 ```
-npm install --save-dev testcafe-reporter-influxdb
+npm install --save-dev testcafe-reporter-influxdb-diauxclient
 ```
 
 ### Local
@@ -25,7 +36,7 @@ Install the library local in the project you want to use the reporter by using t
 ```
 gulp build
 npm pack
-npm install --save-dev ../testcafe-reporter-influxdb/testcafe-reporter-influxdb-1.0.0.tgz
+npm install --save-dev ../testcafe-reporter-influxdb-diauxclient/testcafe-reporter-influxdb-diauxclient-1.0.0.tgz
 ```
 
 ## Usage
@@ -82,4 +93,5 @@ fixture`The user sees the home screen after a successful login`
 This metadata is saved in the database, in order to filter or group on it across multiple applications. You can create a dashboard per feature category for example!
 
 ## Author
-anaisvanasselt (https://linkedin.com/in/anais-van-asselt)
+(forked) akbana42
+(forked from) anaisvanasselt (https://linkedin.com/in/anais-van-asselt)
