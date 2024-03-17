@@ -4,7 +4,7 @@
     "declaration": true,
     "esModuleInterop": true,
     "lib": ["ES2020", "dom"],
-    "module": "commonjs",
+    "module": "CommonJS",
     "noImplicitAny": true,
     "outDir": "lib",
     "resolveJsonModule": true,

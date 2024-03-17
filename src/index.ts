@@ -18,6 +18,8 @@ module.exports = function () {
      */
     async reportTaskStart(startTime: number, userAgents: string[], testCount: number) {
       if (!config.testResultsEnabled) {
+        console.log('### reportTaskStart');
+
         this.write(`Uploading test results to Influx DB is disabled. ${EOL}`);
         return;
       }
@@ -41,6 +43,7 @@ module.exports = function () {
      */
     async reportFixtureStart(name: string, path: string, fixtureMeta: any) {
       if (config.testResultsEnabled) {
+        console.log('### reportFixtureStart');        
         testDataProcessor.fixtureName = name;
         testDataProcessor.application = path;
         testDataProcessor.testType = path;
@@ -55,6 +58,7 @@ module.exports = function () {
      */
     async reportTestStart(/* name, testMeta */) {
       testDataProcessor.startTimeTest = Date.now();
+      console.log('### reportTestStart');
     },
 
     /**
@@ -65,6 +69,9 @@ module.exports = function () {
      */
     async reportTestDone(name: string, testRunInfo: any, testMeta: any) {
       if (config.testResultsEnabled) {
+
+        console.log('### reportTestDone');        
+
         const errors = testRunInfo.errs;
         const warnings = testRunInfo.warnings;
         const hasErrors = !!errors.length;
@@ -109,6 +116,8 @@ module.exports = function () {
      */
     async reportTaskDone(endTime: number, passed: number, warnings: number, testRunResult: any) {
       if (config.testResultsEnabled) {
+        console.log('### reportTaskDone');        
+
         testDataProcessor.durationTestRunMs = endTime;
         testDataProcessor.durationTestRunStr = this.moment
           .duration(testDataProcessor.durationTestRunMs)
